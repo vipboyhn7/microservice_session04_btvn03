@@ -21,10 +21,6 @@ spring:
       hibernate:
         format_sql: true
 
-services:
-  product:
-    base-url: ${PRODUCT_SERVICE_URL:http://localhost:8082}
-
 eureka:
   client:
     service-url:

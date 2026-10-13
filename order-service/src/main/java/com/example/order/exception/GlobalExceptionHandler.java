@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ProductServiceException.class)
     public ResponseEntity<ApiResponseError> handleProductService(
             ProductServiceException exception) {
-        return response(HttpStatus.BAD_GATEWAY, exception.getMessage());
+        return response(exception.getStatus(), exception.getMessage());
     }
 
     @ExceptionHandler(DataAccessException.class)
